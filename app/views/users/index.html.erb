@@ -1,0 +1,25 @@
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>email</th>
+      <th>Zip</th>
+      <th>Address</th>
+      <th>Introduction</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= user.zip %></td>
+        <td><%= user.address %></td>
+        <td><%= user.introduction %></td>
+        <td><%= link_to 'Show', user %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,22 @@
+<p>
+  <strong>email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @user.zip %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @user.address %>
+</p>
+
+<p>
+  <strong>Introduction:</strong>
+  <%= @user.introduction %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'User list', users_path %>
