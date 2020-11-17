@@ -12,7 +12,9 @@
   <body>
     <header>
       <nav>
-        <%= link_to 'HOME', root_path %>
+        <% if user_signed_in? %>
+          <%= link_to 'HOME', root_path %>
+        <% end %>
         <div class="navigation-user">
           <% if user_signed_in? %>
             Logged in as&nbsp;<strong><%= current_user.email %></strong>.&nbsp;
