@@ -1,22 +1,23 @@
 <p>
-  <strong>email:</strong>
+  <strong><%= User.human_attribute_name(:email) %>:</strong>
   <%= @user.email %>
 </p>
 
 <p>
-  <strong>Zip:</strong>
+  <strong><%= User.human_attribute_name(:zip) %>:</strong>
   <%= @user.zip %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong><%= User.human_attribute_name(:address) %>:</strong>
   <%= @user.address %>
 </p>
 
 <p>
-  <strong>Introduction:</strong>
+  <strong><%= User.human_attribute_name(:introduction) %>:</strong>
   <%= @user.introduction %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'User list', users_path %>
+
+<%= link_to t('links.edit'), edit_user_path(@user) %> |
+<%= link_to t('links.user.list'), users_path %>

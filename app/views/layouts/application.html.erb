@@ -13,16 +13,17 @@
     <header>
       <nav>
         <% if user_signed_in? %>
-          <%= link_to 'HOME', root_path %>
+          <%= link_to t('.home'), root_path %>
         <% end %>
         <div class="navigation-user">
           <% if user_signed_in? %>
-            Logged in as&nbsp;<strong><%= current_user.email %></strong>.&nbsp;
-            <%= link_to 'Edit profile', edit_user_registration_path %> &nbsp;|&nbsp;
-            <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+            <strong><%= t('.sign_in_with_provider', provider: current_user.email) %></strong>&nbsp;
+            <%= link_to t('links.user.list'), users_path %> &nbsp;|&nbsp;
+            <%= link_to t('links.user.edit'), edit_user_registration_path %> &nbsp;|&nbsp;
+            <%= link_to t('.sign_out'), destroy_user_session_path, method: :delete %>
           <% else %>
-            <%= link_to 'Sign up', new_user_registration_path %> &nbsp;|&nbsp;
-            <%= link_to 'Login', new_user_session_path %>
+            <%= link_to t('.sign_up'), new_user_registration_path %> &nbsp;|&nbsp;
+            <%= link_to t('.sign_in'), new_user_session_path %>
           <% end %>
         </div>
       </nav>

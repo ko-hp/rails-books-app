@@ -3,10 +3,10 @@
 <table>
   <thead>
     <tr>
-      <th>email</th>
-      <th>Zip</th>
-      <th>Address</th>
-      <th>Introduction</th>
+      <th><%= User.human_attribute_name(:email) %></th>
+      <th><%= User.human_attribute_name(:zip) %></th>
+      <th><%= User.human_attribute_name(:address) %></th>
+      <th><%= User.human_attribute_name(:introduction) %></th>
       <th></th>
     </tr>
   </thead>
@@ -18,7 +18,7 @@
         <td><%= user.zip %></td>
         <td><%= user.address %></td>
         <td><%= user.introduction %></td>
-        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to t('links.show'), user %></td>
       </tr>
     <% end %>
   </tbody>

@@ -8,9 +8,19 @@ ja:
         memo: 'メモ'
         author: '著者'
         picture: '画像'
+  layouts:
+    application:
+      home: 'ホーム'
+      sign_up: 'アカウント登録'
+      sign_in: 'ログイン'
+      sign_out: 'ログアウト'
+      sign_in_with_provider: "%{provider}としてログイン中"
   links:
     book:
       new: '本を作成'
+    user:
+      edit: 'ユーザーを編集'
+      list: 'ユーザーの一覧'
     show: '詳細'
     edit: '編集'
     destroy: '削除'
