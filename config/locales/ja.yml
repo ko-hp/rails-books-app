@@ -9,7 +9,7 @@ ja:
         author: '著者'
         picture: '画像'
   layouts:
-    application:
+    header:
       home: 'ホーム'
       sign_up: 'アカウント登録'
       sign_in: 'ログイン'
