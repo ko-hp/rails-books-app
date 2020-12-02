@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get '/:locale' => 'books#index'
+  root to: 'books#index'
+  devise_for :users
   scope "/:locale" do
+    resources :users
     resources :books
   end
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
